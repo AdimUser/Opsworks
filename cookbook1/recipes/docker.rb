@@ -1,3 +1,8 @@
+include_recipe 'docker::docker_service'
+include_recipe 'docker::docker_image'
+include_recipe 'docker::docker_container'
+
+
 docker_service 'default' do
   action [:create, :start]
 end
